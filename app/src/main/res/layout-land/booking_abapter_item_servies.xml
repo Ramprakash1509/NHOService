@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  <RelativeLayout
+          android:layout_width="match_parent"
+          android:id="@+id/ri_main"
+          android:layout_height="wrap_content"
+          android:padding="@dimen/_5sdp"
+          android:backgroundTint="#9EF1F1F1"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:background="@drawable/background_login"
+          android:layout_marginStart="@dimen/_10sdp"
+          android:layout_marginLeft="@dimen/_10sdp"
+          android:layout_marginEnd="@dimen/_10sdp"
+          android:layout_marginRight="@dimen/_30sdp"
+          android:layout_marginBottom="@dimen/_5sdp">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+          android:layout_width="45dp"
+          android:layout_margin="@dimen/_5sdp"
+          android:src="@drawable/ic_profile"
+          android:padding="@dimen/_2sdp"
+          android:background="@drawable/white_circle"
+          android:layout_height="45dp"
+          android:id="@+id/im5" />
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/im5"
+              android:layout_centerInParent="true"
+              android:layout_marginLeft="@dimen/_8sdp"
+              android:orientation="vertical">
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:id="@+id/name"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:text="name"
+                      android:textStyle="bold"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="12sp" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:id="@+id/total_amount"
+                      android:layout_alignParentRight="true"
+                      android:layout_height="wrap_content"
+                      android:textStyle="bold"
+                      android:gravity="center_vertical"
+                      android:layout_centerInParent="true"
+                      android:text="total_amount"
+                      android:textColor="@color/green"
+                      android:textSize="11sp" />
+
+
+
+              </RelativeLayout>
+
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_2sdp"
+
+                  android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:layout_centerInParent="true"
+                      android:gravity="center_vertical"
+                      android:text="Book On : "
+                      android:textColor="@color/black"
+                      android:textSize="13sp" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:id="@+id/Booking_Date"
+                      android:layout_marginLeft="@dimen/_5sdp"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:layout_centerInParent="true"
+                      android:text="20 april 2022"
+                      android:textColor="@color/catgcol"
+                      android:textSize="11sp" />
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="@dimen/_2sdp"
+                  android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:layout_centerInParent="true"
+                      android:text="Booked Date : "
+                      android:textColor="@color/black"
+                      android:textSize="13sp" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:id="@+id/booked_on"
+                      android:layout_marginLeft="@dimen/_5sdp"
+                      android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:layout_centerInParent="true"
+                      android:text="20 april 2022"
+                      android:textColor="@color/back_bg"
+                      android:textSize="11sp" />
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_2sdp"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                      android:gravity="center_vertical"
+                      android:layout_centerInParent="true"
+                      android:text="Booked Time : "
+                      android:textColor="@color/black"
+                      android:textSize="13sp" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:id="@+id/Booking_time"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_centerInParent="true"
+                  android:text="20 april 2022"
+                  android:textColor="@color/catgcol"
+                  android:textSize="11sp" />
+
+                </LinearLayout>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:id="@+id/servisetype"
+                  android:textStyle="bold"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_centerInParent="true"
+                  android:text="20 april 2022"
+                  android:textColor="@color/catgcol"
+                  android:textSize="12sp" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:id="@+id/wash_Count"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_centerInParent="true"
+                  android:text="20 april 2022"
+                  android:textColor="@color/catgcol"
+                  android:textSize="11sp" />
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:id="@+id/payment_type"
+                  android:layout_marginTop="@dimen/_2sdp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_centerInParent="true"
+                  android:text="20 april 2022"
+                  android:textColor="#102BB0"
+                  android:textSize="13sp" />
+
+   <TextView
+                  android:layout_width="wrap_content"
+                  android:id="@+id/booking_assigned"
+       android:textStyle="bold"
+                  android:layout_marginTop="@dimen/_2sdp"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_vertical"
+                  android:layout_centerInParent="true"
+                  android:text="booking_assigned"
+                  android:textColor="@color/red"
+                  android:textSize="13sp" />
+
+
+          </LinearLayout>
+
+      </RelativeLayout>-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ri_main"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:backgroundTint="#9EF1F1F1"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/background_login"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/ic_profile"
+            android:padding="@dimen/_2sdp"
+            android:background="@drawable/white_circle"
+            android:layout_height="45dp"
+            android:id="@+id/im5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im5"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toLeftOf="@+id/total_amount"
+                    android:gravity="center_vertical"
+                    android:text="name me name v name name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@drawable/rect_amount"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="Rs.  100"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/servisetype"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="20 april 2022"
+                android:textColor="@color/catgcol"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="Booking Date : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/Booking_Date"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Service Date : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/booked_on"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/back_bg"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Service Time : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/Booking_time"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Payment Status : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/payment_status"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Payment Mode  : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/Payment_mode"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/wash_Count"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="20 april 2022"
+                android:textColor="@color/catgcol"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/payment_type"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="20 april 2022"
+                android:textColor="#102BB0"
+                android:textSize="13sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linea_user_detail"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/rect_amount"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:text="User Name : "
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/user_name_tv"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="20 april 2022"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:text="User Email : "
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/user_email_tv"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="20 april 2022"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="User Number  : "
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/usernumber"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="20 april 2022"
+                        android:textColor="@color/back_bg"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="User Address  : "
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/useraddress"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="20 april 2022"
+                        android:textColor="@color/back_bg"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="User Landmark  : "
+                        android:textColor="@color/black"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/userlandmark"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="20 april 2022"
+                        android:textColor="@color/back_bg"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/booking_assigned"
+                android:background="@drawable/rect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_alignParentRight="true"
+                android:text="   Assigned To   "
+                android:padding="@dimen/_3sdp"
+                android:backgroundTint="@color/green"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="right"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:orientation="horizontal">
+
+
+               <TextView
+                   android:id="@+id/payment_update"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:drawableLeft="@drawable/ic_booking"
+                   android:drawableTint="@color/green"
+                    android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:text="   Payment Update   "
+                   android:gravity="center_vertical"
+                   android:padding="@dimen/_1sdp"
+                   android:layout_toLeftOf="@+id/goto_live"
+                   android:layout_gravity="center_vertical"
+                   android:textColor="@color/green"
+                   android:textSize="13sp"
+                   android:layout_marginRight="@dimen/_15sdp"
+                   android:textStyle="bold" />
+
+               <TextView
+                   android:id="@+id/goto_live"
+                   android:layout_toRightOf="@+id/payment_update"
+
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:background="@drawable/rect"
+                   android:drawableLeft="@drawable/googlemaps"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="@dimen/_3sdp"
+                   android:layout_alignParentRight="true"
+                   android:text="   Map   "
+                   android:gravity="center_vertical"
+                   android:padding="@dimen/_1sdp"
+                   android:layout_gravity="center_vertical"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="13sp"
+                   android:textStyle="bold" />
+
+
+           </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

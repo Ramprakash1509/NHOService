@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.TotalIncome">
+        <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:background="@drawable/rect_dashboad"
+            android:id="@+id/list"
+            android:elevation="@dimen/_10ssp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:orientation="horizontal">
+           <TextView
+                     android:layout_marginLeft="@dimen/_50ssp"
+                    android:textColor="@color/red"
+                    android:id="@+id/Incom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14sdp"
+                    android:text="Total Income  "
+                    />
+                <TextView
+                    android:textColor="@color/blue"
+                    android:layout_marginLeft="@dimen/_70sdp"
+                    android:id="@+id/todayIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_12sdp"
+                    />
+
+        </LinearLayout>
+    <ProgressBar
+        android:id="@+id/idProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_centerInParent="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:id="@+id/ll_bookinglist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10ssp"
+            android:orientation="vertical">
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

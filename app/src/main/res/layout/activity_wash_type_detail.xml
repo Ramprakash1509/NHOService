@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.WashTypeDetailActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/tv_Continue"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_carservies"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:text="Basic Wash"
+                 android:textColor="@color/black"
+                android:textSize="18sp"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/carimage"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/white_circle"
+                    android:backgroundTint="#FBD3D0"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/rnd_logo" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_bw_1"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_bw_1"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_bw_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/carimage2"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/white_circle"
+                    android:backgroundTint="#FBD3D0"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/rnd_logo" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_bw_2"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_bw_2"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_bw_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/rnd_logo"
+                    android:padding="@dimen/_2sdp"
+                    android:backgroundTint="#FBD3D0"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/carimage3"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage3"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_bw_3"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_bw_3"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_bw_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:text="Special Wash"
+                 android:textColor="@color/black"
+                android:textSize="18sp"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/relative4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/rnd_logo"
+                    android:padding="@dimen/_2sdp"
+                    android:backgroundTint="#FBD3D0"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/carimage23"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage23"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_sw_1"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_sw_1"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_sw_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/carimage5"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/white_circle"
+                    android:backgroundTint="#FBD3D0"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/rnd_logo" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage5"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_sw_2"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_sw_2"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_sw_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_5sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/rnd_logo"
+                    android:padding="@dimen/_2sdp"
+                    android:backgroundTint="#FBD3D0"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/carimage6"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage6"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_sw_3"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_sw_3"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_sw_3"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+ <TextView
+                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:text="Water Less Wash"
+                 android:textColor="@color/black"
+                android:textSize="18sp"
+                 />
+
+            <RelativeLayout
+                android:id="@+id/relative7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/rnd_logo"
+                    android:padding="@dimen/_2sdp"
+                    android:backgroundTint="#FBD3D0"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/carimage7"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage7"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_wlw_1"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_wlw_1"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+
+                    android:id="@+id/rd_wlw_1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/rnd_logo"
+                    android:padding="@dimen/_2sdp"
+                    android:backgroundTint="#FBD3D0"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/carimage8"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage8"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_wlw_2"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_wlw_2"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_wlw_2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:background="@drawable/background_login"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/rnd_logo"
+                    android:padding="@dimen/_2sdp"
+                    android:backgroundTint="#FBD3D0"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/carimage9"/>
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/carimage9"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ValidityMonth_wlw_3"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Car Wash"
+                         android:textColor="@color/black"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Price :  Rs.150"
+                        android:id="@+id/Price_wlw_3"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rd_wlw_3"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

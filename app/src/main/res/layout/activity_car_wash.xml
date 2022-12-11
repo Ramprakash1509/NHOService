@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    tools:context=".Activity.CarWashActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/li_register"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@color/white"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:text="Select your Car/Bus/ Truck"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/backgrondlayout"
+                    android:layout_height="@dimen/_1sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_carlist"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+
+                    <ProgressBar
+                        android:id="@+id/idProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+
+                </LinearLayout>
+
+
+
+<!--
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/background_login"
+                     android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:padding="@dimen/_6sdp"
+                       android:id="@+id/im1"
+                       android:src="@drawable/ic_baseline_camera_alt_24"
+                       android:layout_height="@dimen/_35sdp"
+                       android:backgroundTint="@color/lohoyint"
+                       android:background="@drawable/white_circle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_toRightOf="@+id/im1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_centerInParent="true"
+                         android:text="Acura Brand\nModel: ABXY2010"
+                        android:textColor="@color/catgcol"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rd1"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/background_login"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:padding="@dimen/_6sdp"
+                       android:id="@+id/im2"
+                       android:src="@drawable/ic_baseline_camera_alt_24"
+                       android:layout_height="@dimen/_35sdp"
+                       android:backgroundTint="@color/lohoyint"
+                       android:background="@drawable/white_circle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/im2"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_centerInParent="true"
+                        android:text="Alfa Romeo\nModel: ABXY2010"
+                        android:textColor="@color/catgcol"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rd2"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:checked="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/background_login"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:padding="@dimen/_6sdp"
+                       android:id="@+id/im3"
+                       android:src="@drawable/ic_baseline_camera_alt_24"
+                       android:layout_height="@dimen/_35sdp"
+                       android:backgroundTint="@color/lohoyint"
+                       android:background="@drawable/white_circle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/im3"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_centerInParent="true"
+                        android:text="Aston Martin.\nModel: ABXY2010"
+                        android:textColor="@color/catgcol"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rd3"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"
+                         />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/background_login"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:padding="@dimen/_6sdp"
+                       android:id="@+id/im4"
+                       android:src="@drawable/ic_baseline_camera_alt_24"
+                       android:layout_height="@dimen/_35sdp"
+                       android:backgroundTint="@color/lohoyint"
+                       android:background="@drawable/white_circle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/im4"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_centerInParent="true"
+                        android:text="BMW\nModel: ABXY2010"
+                        android:textColor="@color/catgcol"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rd4"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"
+                         />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5sdp"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/background_login"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_5sdp">
+
+
+                   <ImageView
+                       android:layout_width="@dimen/_35sdp"
+                       android:padding="@dimen/_6sdp"
+                       android:id="@+id/im5"
+                       android:src="@drawable/ic_baseline_camera_alt_24"
+                       android:layout_height="@dimen/_35sdp"
+                       android:backgroundTint="@color/lohoyint"
+                       android:background="@drawable/white_circle"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/im5"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_centerInParent="true"
+                        android:text="Bugatti\nModel: ABXY2010"
+                        android:textColor="@color/catgcol"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rd5"
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"
+                         />
+
+                </RelativeLayout>-->
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:backgroundTint="@color/white"
+                android:background="@drawable/background_login"
+                 android:layout_marginLeft="@dimen/_10sdp"
+                 android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                     android:text="Car Wash  : "
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:text=""
+                    android:id="@+id/carwash_price"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_centerVertical="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/tv_Continue"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/li_loginn"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="50dp"
+                android:textSize="17sp"
+                android:text="  Continue  "
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@drawable/rect_gradient_spla"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

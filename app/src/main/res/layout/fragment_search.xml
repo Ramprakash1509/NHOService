@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Dashboard.ui.ServiceFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="My Location"
+            android:textColor="@color/grayText"
+            android:textSize="15sp" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+             android:backgroundTint="@color/lohoyint"
+            android:background="@drawable/background_login"
+            app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+            app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:id="@+id/ivMobileNo2"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="15dp"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/nav_location" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:focusable="false"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="john@gmail.com"
+                android:id="@+id/my_location"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivMobileNo2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10sdp"
+            android:text="Company Location"
+            android:textColor="@color/grayText"
+            android:textSize="15sp" />
+
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/lohoyint"
+            android:background="@drawable/background_login"
+            app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+            app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:id="@+id/ivMobileNo"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginLeft="15dp"
+                android:tint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/nav_location" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                 android:paddingLeft="10dp"
+                android:focusable="false"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="E-1/151, Priyadarshini Colony, Sector-C, Sitapur Road"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivMobileNo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/map"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <include layout="@layout/fragment_search_location_maps"/>
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

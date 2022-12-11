@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+
+            android:layout_marginRight="@dimen/_10sdp"
+            android:drawableTint="@color/back_bg"
+            android:id="@+id/service_boy_name"
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/li_loginn"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:paddingRight="15dp"
+            android:text="  Select Service Boy  "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#E7E7E7"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_height="@dimen/_1sdp"/>
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

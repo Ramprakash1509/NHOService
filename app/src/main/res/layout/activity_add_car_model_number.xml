@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.AddCarModelNumber">
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="@dimen/_10ssp"
+        android:padding="@dimen/_50sdp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/background_login"
+            android:backgroundTint="@color/lohoyint"
+            android:padding="@dimen/_6sdp">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+
+                />
+        </RelativeLayout>
+     <!--   android:prompt="@string/spinner_title"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/background_login"
+            android:backgroundTint="@color/lohoyint"
+            android:padding="@dimen/_6sdp">
+
+
+            <EditText
+                android:id="@+id/modelNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:hint="Enter Car Model No."
+                android:inputType="textCapSentences"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textColorHint="#7A7878"
+                android:textSize="@dimen/_12sdp" />
+
+
+        </RelativeLayout>
+        <TextView
+
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/li_register"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/background_login"
+            android:backgroundTint="@color/colorPrimary"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="  Submit  "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+        <ProgressBar
+            android:id="@+id/PB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></ProgressBar>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerview"
+            />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

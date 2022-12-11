@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.BookingActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/ivMobileNo"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Your Name"
+                   
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivMobileNo" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <EditText
+                    android:id="@+id/et_mobile"
+                    android:layout_width="match_parent"
+                    android:maxLength="10"
+                     android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Your Mobile"
+                    android:inputType="phone"
+                    android:paddingLeft="10dp"
+                   
+
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <EditText
+                    android:id="@+id/ed_date"
+                     android:layout_width="match_parent"
+                     android:layout_marginLeft="@dimen/_8sdp"
+                   
+
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Select Date"
+                    android:focusable="false"
+                     android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <EditText
+                    android:id="@+id/service_time"
+
+                    android:layout_width="match_parent"
+                   
+
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Select Time"
+                    android:focusable="false"
+
+
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <Spinner
+                     android:layout_width="match_parent"
+                    android:id="@+id/Select_Your_Car"
+                     android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Select Your Car"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <Spinner
+                     android:layout_width="match_parent"
+                     android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                     android:id="@+id/Select_Your_Wash"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <EditText
+                     android:layout_width="match_parent"
+                    android:id="@+id/ed_total_amount"
+                     android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Total Amount : price"
+                    android:paddingLeft="10dp"
+                   
+
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <EditText
+                    android:id="@+id/ed_Address"
+                     android:layout_width="match_parent"
+                     android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Address"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                   
+
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:backgroundTint="@color/lohoyint"
+                android:background="@drawable/background_login"
+                app:layout_constraintBottom_toTopOf="@+id/clEnterOtp"
+                app:layout_constraintEnd_toStartOf="@+id/clGetOtp"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                 <ImageView
+                    android:visibility="gone"
+                     android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:tint="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_mobile_no" />
+
+                <EditText
+                     android:layout_width="match_parent"
+                     android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="Landmark"
+                    android:id="@+id/ed_Landmark"
+                   
+
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/tv_Submit"
+                android:layout_below="@+id/li_loginn"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_height="50dp"
+                android:textSize="15sp"
+                android:text="  Submit  "
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:background="@drawable/rect_gradient_spla"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

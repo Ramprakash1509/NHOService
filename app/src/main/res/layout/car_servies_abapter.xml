@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:backgroundTint="#9EF1F1F1"
+        android:background="@drawable/background_login"
+         android:layout_marginLeft="@dimen/_5sdp"
+         android:layout_marginRight="@dimen/_5sdp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/carwash"
+            android:padding="@dimen/_2sdp"
+            android:backgroundTint="#FBD3D0"
+            android:background="@drawable/white_circle"
+            android:layout_height="45dp"
+            android:id="@+id/carimage"/>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/carimage"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/carservies"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="Car Wash"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="Price :  Rs.150"
+                android:id="@+id/Price"
+                android:textColor="@color/catgcol"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/rd1"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

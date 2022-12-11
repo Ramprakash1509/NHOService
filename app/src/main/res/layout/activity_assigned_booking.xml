@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Admin.AssignedBookingActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ri_main"
+        android:background="@drawable/rect_dashboad_as"
+
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+         android:layout_marginTop="@dimen/_10sdp"
+         android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="45dp"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/ic_profile"
+            android:padding="@dimen/_2sdp"
+            android:background="@drawable/white_circle"
+            android:layout_height="45dp"
+            android:id="@+id/im5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im5"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_toLeftOf="@+id/total_amount"
+                    android:gravity="center_vertical"
+                    android:text="name me name v name name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@drawable/rect_amount"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="Rs.  100"
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="Car Model : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/modelNuber"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/servisetype"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="20 april 2022"
+                android:textColor="@color/catgcol"
+                android:textSize="13sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_vertical"
+                    android:text="Booking Date : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/Booking_Date"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Service Date : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/booked_on"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/back_bg"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Service Time : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/Booking_time"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Payment Status : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/payment_status"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="Payment Mode  : "
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/Payment_mode"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_centerInParent="true"
+                    android:text="20 april 2022"
+                    android:textColor="@color/catgcol"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/wash_Count"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="20 april 2022"
+                android:textColor="@color/catgcol"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/payment_type"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:text="20 april 2022"
+                android:textColor="#102BB0"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_assigned"
+                android:visibility="gone"
+                android:background="@drawable/rect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_alignParentRight="true"
+                android:text="   Assigned To   "
+                android:padding="@dimen/_3sdp"
+                android:backgroundTint="@color/green"
+                android:layout_gravity="end"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:drawableTint="@color/back_bg"
+        android:drawableRight="@drawable/ic_baseline_arrow_drop_down_24"
+        android:id="@+id/tv_Service_boy"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/li_loginn"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/rect_dashboad_as"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:drawableLeft="@drawable/user"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:drawablePadding="@dimen/_15sdp"
+        android:text="Select Service Boy"
+        android:textColor="#767676"
+        android:textSize="12sp" />
+
+
+
+    <TextView
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:drawableTint="@color/back_bg"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/li_loginn"
+        android:layout_gravity="center_vertical"
+         android:gravity="center_vertical"
+        android:text="Booking Slots"
+        android:id="@+id/tv_Slots"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+        <ProgressBar
+            android:id="@+id/idProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_centerInParent="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_booking_check"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_margin="@dimen/_40sdp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/li_loginn"
+        android:layout_gravity="center"
+        android:background="@drawable/rect_gradient_spla"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="  Submit  "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
+
+
+</LinearLayout>

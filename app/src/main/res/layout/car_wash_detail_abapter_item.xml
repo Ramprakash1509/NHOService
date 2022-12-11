@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/lohoyint"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/li_carwash"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/rect_dashboad"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:id="@+id/carimage"
+            android:src="@drawable/carwash"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:padding="@dimen/_2sdp"
+            android:backgroundTint="#F8DDDB"
+            android:background="@drawable/white_circle"
+            android:layout_height="60dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Car Wash"
+            android:id="@+id/carwashname"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

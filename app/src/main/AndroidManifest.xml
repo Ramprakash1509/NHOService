@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nhoserviceboy.carwash">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".Activity.HomeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PaymentGatway"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ServiceBoyAttend"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.PhoneAuthServiceboy"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.SignupActivityServiceBoy"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ServiceBoyHistoryInAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DailyServiceHistory"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DailyServices"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DailyBooking"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddCarModelNumber"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddModelNumber"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TotalIncome"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TodayIncome"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CompletedService"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.WashTypeDetailActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ServiceBoyDasBoad"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.BookingAllActivity1"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ServiceBoyNotification"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AdminNotification"
+            android:exported="false" />
+        <activity
+            android:name=".Custom"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Translucentt" />
+        <activity
+            android:name=".Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MapShowActivity"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD1J5K0jjm1Lphq5282s0JL0vPRKjo7L5Y" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Activity.GetCurrentLocation"
+            android:exported="false" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="false"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Admin.SeviceBoyModule.UpdateServiceBoy"
+            android:exported="false" />
+        <activity
+            android:name=".ServiesBoy.ServiesBoyDashboadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AssignedBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.BookingAllActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.MyShopBoyListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.SeviceBoyModule.ServiceListScreen"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.BookingAllincudeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.DashBoadAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ServiceBoysBooking"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Addshop_SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.AccountSelectActivity"
+            android:exported="false" />
+        <activity android:name=".Activity.WashTypeDetailActivity" />
+        <activity android:name=".Activity.CompanyOverviewActivity" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Activity.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".Admin.MapuserActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Activity.Orders_Details_Activity" />
+        <activity android:name=".Activity.CarWashActivity" />
+        <activity android:name=".Activity.BookingActivity" />
+        <activity android:name=".Activity.BookingActivityNew" />
+        <activity android:name=".Activity.DashboadActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Activity.SignupActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".MyFirebaseInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".VerifyPhoneActivity" />
+        <activity android:name=".ProfileActivity" />
+    </application>
+
+</manifest>

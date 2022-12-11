@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/rect"
+    android:layout_margin="@dimen/_3sdp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="Confirmation !"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/rnd_logo"
+                    android:layout_height="@dimen/_30sdp"/>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Are You Sure You \nWant To Rebooking ?"
+                android:textSize="@dimen/_13sdp"
+                android:gravity="left"
+                android:id="@+id/msg"
+                android:textColor="@color/black" />
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:alpha="0.8">
+
+                <Button
+                    android:id="@+id/okButton"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="@drawable/rect"
+                    android:backgroundTint="#4CAF50"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Confirm"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <Button
+                    android:id="@+id/Cancel"
+                    android:background="@drawable/rect"
+
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:text="Cancel"
+                    android:layout_toRightOf="@+id/okButton"
+                    android:padding="@dimen/_10sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"
+                    />
+
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

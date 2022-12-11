@@ -1,0 +1,534 @@
+package com.nhoserviceboy.carwash.Activity;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import android.Manifest;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.IntentSender;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResult;
+import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.android.libraries.places.widget.Autocomplete;
+import com.google.android.libraries.places.widget.AutocompleteActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.nhoserviceboy.carwash.R;
+import com.nhoserviceboy.carwash.Utils.Loader;
+import com.nhoserviceboy.carwash.Utils.UtilMethods;
+
+public class SignupActivity extends AppCompatActivity implements View.OnClickListener , GoogleApiClient.ConnectionCallbacks,
+        GoogleApiClient.OnConnectionFailedListener{
+
+    TextView texttoolbar, tv_signup;
+    ImageView backprese;
+    EditText et_fullname, ed_phonenumber, ed_email, ed_Password, ed_Confirm_password  ,  ed_Landmark , ed_Address;
+    private FirebaseFirestore db;
+    Loader loader;
+    private Location mLastLocation;
+    private GoogleApiClient mGoogleApiClient;
+
+    public static double latitude;
+    public static double longitude;
+    LocationRequest mLocationRequest;
+    private final static int PLAY_SERVICES_REQUEST = 1000;
+    private final static int REQUEST_CHECK_SETTINGS = 2000;
+    private final static int AUTOCOMPLETE_REQUEST_CODE = 1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signup);
+
+        loader = new Loader(this,android.R.style.Theme_Translucent_NoTitleBar);
+
+        db = FirebaseFirestore.getInstance();
+
+
+        Getid();
+
+        if (checkPlayServices()) {
+
+            buildGoogleApiClient();
+
+        }
+
+
+    }
+
+
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(SignupActivity.this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API).build();
+
+        mGoogleApiClient.connect();
+
+        LocationRequest mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(10000);
+        mLocationRequest.setFastestInterval(5000);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+
+        LocationSettingsRequest.Builder builder = new LocationSettingsRequest.Builder()
+                .addLocationRequest(mLocationRequest);
+
+        PendingResult<LocationSettingsResult> result =
+                LocationServices.SettingsApi.checkLocationSettings(mGoogleApiClient, builder.build());
+
+        result.setResultCallback(new ResultCallback<LocationSettingsResult>() {
+            @Override
+            public void onResult(LocationSettingsResult locationSettingsResult) {
+
+                final Status status = locationSettingsResult.getStatus();
+
+                switch (status.getStatusCode()) {
+                    case LocationSettingsStatusCodes.SUCCESS:
+                        // All location settings are satisfied. The client can initialize location requests here
+                        getLocation();
+                        break;
+                    case LocationSettingsStatusCodes.RESOLUTION_REQUIRED:
+                        try {
+                            // Show the dialog by calling startResolutionForResult(),
+                            // and check the result in onActivityResult().
+                            status.startResolutionForResult(SignupActivity.this, REQUEST_CHECK_SETTINGS);
+
+                        } catch (IntentSender.SendIntentException e) {
+                            // Ignore the error.
+                        }
+                        break;
+                    case LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE:
+                        break;
+                }
+            }
+        });
+
+    }
+
+    private boolean checkPlayServices() {
+
+        GoogleApiAvailability googleApiAvailability = GoogleApiAvailability.getInstance();
+
+        int resultCode = googleApiAvailability.isGooglePlayServicesAvailable(this);
+
+        if (resultCode != ConnectionResult.SUCCESS) {
+            if (googleApiAvailability.isUserResolvableError(resultCode)) {
+                googleApiAvailability.getErrorDialog(this, resultCode,
+                        PLAY_SERVICES_REQUEST).show();
+            } else {
+                Toast.makeText(getApplicationContext(),
+                        "This device is not supported.", Toast.LENGTH_LONG)
+                        .show();
+                finish();
+            }
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+
+            case REQUEST_CHECK_SETTINGS:
+                switch (resultCode) {
+
+                    case Activity.RESULT_OK:
+                        // All required changes were successfully made
+                        getLocation();
+                        break;
+
+                    case Activity.RESULT_CANCELED:
+                        // The user was asked to change settings, but chose not to
+                        break;
+
+
+                    default:
+                        break;
+                }
+                break;
+        }
+
+        if (requestCode == AUTOCOMPLETE_REQUEST_CODE) {
+            if (resultCode == RESULT_OK) {
+                Place place = (Place) Autocomplete.getPlaceFromIntent(data);
+
+                // location.setText(""+ place.getName());
+
+                ed_Address.setText( place.getAddress()+" , "+place.getName());
+
+
+            } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
+                Status status = Autocomplete.getStatusFromIntent(data);
+                // Log.i(TAG, status.getStatusMessage());
+            } else if (resultCode == RESULT_CANCELED) {
+
+                // The user canceled the operation.
+
+            }
+        }
+    }
+
+
+    private void getLocation() {
+        try {
+            mLastLocation = LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+        } catch (SecurityException e) {
+            e.printStackTrace();
+        }
+        if (mLastLocation == null) {
+            mLocationRequest = new LocationRequest();
+            mLocationRequest = new LocationRequest();
+            mLocationRequest.setInterval(1000);
+            mLocationRequest.setFastestInterval(1000);
+            mLocationRequest.setPriority(LocationRequest.PRIORITY_BALANCED_POWER_ACCURACY);
+            if (ContextCompat.checkSelfPermission(this,
+                    Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
+
+                try {
+                    LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, (com.google.android.gms.location.LocationListener) this);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        } else {
+            latitude = mLastLocation.getLatitude();
+            longitude = mLastLocation.getLongitude();
+            GlobalData.latitude = mLastLocation.getLatitude();
+            GlobalData.longitude = mLastLocation.getLongitude();
+
+
+          //  Toast.makeText(this, longitude+"   ,   :   "+ latitude, Toast.LENGTH_SHORT).show();
+
+
+            // Log.e("GlobalData.latitude3", "" + GlobalData.latitude);
+            // Log.e("GlobalData.longitude3 ", "" + GlobalData.longitude);
+
+            GetLOcation();
+        }
+
+    }
+
+    private void GetLOcation() {
+
+        // GetLocation Location = new GetLocation(this);
+        //  latitude = Location.getLatitude();
+        // longitude = Location.getLongitude();
+
+
+        Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        List<Address> addresses = null;
+        try {
+            addresses = geocoder.getFromLocation(GlobalData.latitude, GlobalData.longitude, 1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String cityName = addresses.get(0).getAddressLine(0);
+        String stateName = addresses.get(0).getCountryName();
+        String countryName = addresses.get(0).getLocality();
+
+        // Log.e("countryName","   cityName  "+  cityName  + "    stateName   "+ stateName  +"   countryName   "+countryName);
+
+
+        //  location.setText(""+countryName);
+         ed_Address.setText(cityName+" , "+ countryName);
+
+
+    }
+
+    private void Getid() {
+
+        ed_Address = findViewById(R.id.ed_Address);
+        ed_Landmark = findViewById(R.id.ed_Landmark);
+
+        et_fullname = findViewById(R.id.et_fullname);
+        ed_phonenumber = findViewById(R.id.ed_phonenumber);
+        ed_phonenumber.setText(getIntent().getStringExtra("phone"));
+        ed_email = findViewById(R.id.ed_email);
+        ed_Password = findViewById(R.id.ed_Password);
+        ed_Confirm_password = findViewById(R.id.ed_Confirm_password);
+        tv_signup = findViewById(R.id.tv_signup);
+        tv_signup.setOnClickListener(this);
+
+        texttoolbar = findViewById(R.id.texttoolbar);
+        backprese = findViewById(R.id.backprese);
+        backprese.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        texttoolbar.setText("Registration");
+
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if (view == tv_signup)
+        {
+
+            if(et_fullname.getText().toString().trim().isEmpty())
+            {
+                et_fullname.setError("Enter Full Name");
+                et_fullname.setFocusable(true);
+
+
+            }else  if(ed_Address.getText().toString().trim().isEmpty()){
+                ed_Address.setError("Enter Address");
+                ed_Address.setFocusable(true);
+            }else  if(ed_Landmark.getText().toString().trim().isEmpty()){
+                ed_Landmark.setError("Enter Landmark");
+                ed_Landmark.setFocusable(true);
+
+
+            }else  if(ed_phonenumber.getText().toString().trim().isEmpty())
+            {
+                ed_phonenumber.setError("Enter Phone Number");
+                ed_phonenumber.setFocusable(true);
+
+
+            }else  if( !isValidEmail(ed_email.getText().toString().trim()))
+            {  ed_email.setError("Enter Email");
+                ed_email.setFocusable(true);
+
+
+
+            }else {
+
+                if (UtilMethods.INSTANCE.isNetworkAvialable(SignupActivity.this))
+                {
+                    loader.show();
+                    loader.setCancelable(false);
+                    loader.setCanceledOnTouchOutside(false);
+                    addDataToFirestore(""+ed_email.getText().toString().trim(),
+                            ""+ed_phonenumber.getText().toString().trim() ,""+et_fullname.getText().toString().trim() ,
+                            ""+ed_Address.getText().toString().trim() , ""+ ed_Landmark.getText().toString().trim() ,"User");
+                    /* hitLoginApi(""+ed_email.getText().toString().trim(), ""+ed_Password.getText().toString().trim(),
+                            ""+ed_phonenumber.getText().toString().trim() ,""+et_fullname.getText().toString().trim(),
+                            ""+ed_Address.getText().toString().trim(),""+ed_Landmark.getText().toString().trim() );
+*/
+
+                } else
+                {
+                    UtilMethods.INSTANCE.Error(SignupActivity.this, getResources().getString(R.string.network_error_message));
+                }
+
+            }
+
+        }
+    }
+
+    private void hitLoginApi(String email  ,String  Password  , String  phonenumber ,String fullname ,String Address , String Landmark ) {
+
+        db.collection("Users")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>()
+                {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+
+                            Log.e("savedatatask",""+ task.getResult());
+
+                            for(QueryDocumentSnapshot doc : task.getResult()){
+
+                                if (loader != null) {
+                                    if (loader.isShowing())
+                                        loader.dismiss();
+                                }
+
+                                Log.e("savedata",""+ doc);
+
+                                String a=""+doc.getString("email");
+                                String a1=""+email.toString().trim();
+
+                                Log.e("docdocuzaai",""+ a);
+                                Log.e("docdocuzaai2",""+ a1);
+
+                               /* if(a.equalsIgnoreCase(a1)) {*/
+
+
+
+                              /*  }else{
+
+                                    Toast.makeText(SignupActivity.this, "Enter Unique Email Id", Toast.LENGTH_SHORT).show();
+
+                                }*/
+
+                            }
+
+                        }
+                    }
+                });
+
+    }
+
+    private boolean isValidEmail(String email) {
+
+        boolean isValid = false;
+
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        CharSequence inputStr = email;
+
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(inputStr);
+        if (matcher.matches()) {
+            isValid = true;
+        }
+        return isValid;
+    }
+
+    private void addDataToFirestore(String email, String phonenumber ,String username , String Address, String Landmark,String loginType) {
+        FirebaseFirestore firebaseFirestore=FirebaseFirestore.getInstance();
+        SharedPreferences sharedPref = getSharedPreferences("application", MODE_PRIVATE);
+        String tokenId=sharedPref.getString("tokenId", null);
+        final int min = 200;
+        final int max = 8000000;
+        FirebaseUser user= FirebaseAuth.getInstance().getCurrentUser();
+        CollectionReference dbCourses = db.collection("Users");
+        RegisterModel courses = new RegisterModel(email, phonenumber, username  ,Address,  Landmark  ,latitude,longitude, loginType ,user.getUid(),tokenId);
+        // below method is use to add data to Firebase Firestore.
+
+        dbCourses.document(user.getUid()).set(courses).addOnSuccessListener(new OnSuccessListener<Void>()
+                {
+                    @Override
+                    public void onSuccess(Void aVoid)
+                    {
+                       // db.collection("BookingHistory").document(user.getUid()).update("uiToken",tokenId);
+                        UtilMethods.INSTANCE.setLoginrespose(SignupActivity.this,email+"",phonenumber+"" ,
+                        ""+username ,"1" ,user.getUid(),Address ,Landmark ,latitude,longitude );
+                      Toast.makeText(SignupActivity.this, "User Create", Toast.LENGTH_SHORT).show();
+
+                       /* Log.d("","jdshfhfieoi9r"+user.getUid());
+                           Map<String, Object> tokenData = new HashMap<>();
+                           tokenData.put("userDevicetoken", tokenId);
+                            tokenData.put("userId", user.getUid());*/
+                            //firebaseFirestore.collection("DeviceToken").document().set(tokenData);
+
+
+
+
+                Intent home = new Intent(SignupActivity.this, DashboadActivity.class);
+                startActivity(home);
+                finish();
+                      //  Log.d("DocumentSnapshot successfully written!");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener()
+                {
+                    @Override
+                    public void onFailure(@NonNull Exception e)
+                    {
+                       // Log.w(TAG, "Error writing document", e);
+                    }
+                });
+//                addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+//            @Override
+//            public void onSuccess(DocumentReference documentReference) {
+//
+////                if (loader != null) {
+////                    if (loader.isShowing())
+////                        loader.dismiss();
+////                }
+////                UtilMethods.INSTANCE.setLoginrespose(SignupActivity.this,email+"" , ""+password ,phonenumber+"" ,
+////                        ""+username ,"1" ,documentReference.getId() ,Address ,Landmark ,latitude,longitude );
+////                Toast.makeText(SignupActivity.this, "User Create", Toast.LENGTH_SHORT).show();
+////                Intent home = new Intent(SignupActivity.this, DashboadActivity.class);
+////                startActivity(home);
+////                finish();
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception e) {
+//
+//                if (loader != null) {
+//                    if (loader.isShowing())
+//                        loader.dismiss();
+//                }
+//
+//                Toast.makeText(SignupActivity.this, "Fail to add User \n" + e, Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
+    }
+
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+}

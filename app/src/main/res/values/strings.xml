@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">NHO SERVICES</string>
+    <string name="google_place_key">AIzaSyCkpn7jAbY-rccPDgEYuexKCBO1GPVqBTU</string>
+    <string name="network_error_title">Network Error!</string>
+    <string name="successful_title">Successful.</string>
+    <string name="attention_error_title">Attention</string>
+    <string name="network_error_message">Please check your network connection and try again.</string>
+    <string name="login_signup">Login</string>
+    <string name="register_here"><u>Register Here</u></string>
+    <string name="rupee">\u20B9  </string>
+    <string name="registerssss_here"><u>Sign in !</u></string>
+    <string name="wlccmback"><u>Welcome Back</u></string>
+    <string name="posted_date">Posted date :</string>
+
+
+    <string name="abountustext">Lorem ipsum, or lipsum as it is sometimes known, dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to ha scrambled parts of Ciceros De Finibus Bonorum et Malorum for use in a type specimen book.
+
+In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</string>
+
+
+    <!--<string name="banner" translatable="false">"ca-app-pub-3940256099942544/6300978111"</string>-->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="permission_msg">Gallery and Camera permission is required</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="map_key">AIzaSyD1J5K0jjm1Lphq5282s0JL0vPRKjo7L5Y</string>
+
+
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_50sdp"
+    android:id="@+id/toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/rect_toolbar"
+            app:tint="@color/colorPrimary" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="@dimen/_20sdp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/backprese"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/logout_im"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:background="@drawable/white_circle"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_logout"
+            app:tint="@color/white" />
+
+
+        <TextView
+            android:id="@+id/texttoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_toRightOf="@+id/backprese"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text=" Add Service Boy "
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+       <!-- <TextView
+            android:id="@+id/serviceboyNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/bell"
+            android:drawableTint="@color/white"
+            android:gravity="center_vertical" />-->
+        <TextView
+            android:id="@+id/serviceboyNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/bell"
+            android:drawableTint="@color/white"
+
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

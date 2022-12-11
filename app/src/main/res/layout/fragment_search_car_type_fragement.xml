@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.SearchCarTypeFragement">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#F3F3F3"
+        android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/wishing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello,"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15sdp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Welcome Back! Choose One of Our Services"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/grayText" />
+
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_car_wash_detail"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    >
+
+                    <SearchView
+                        android:queryBackground="@android:color/transparent"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="Search here"
+                        android:id="@+id/simpleSearchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/rect" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/recyclerview"
+                        />
+
+
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_Continue"
+            android:visibility="gone"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
+            android:textSize="15sp"
+            android:text="  Continue  "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/rect_gradient_spla"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/booking"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/navigation"
+            android:layout_alignParentRight="true"
+            android:layout_margin="30dp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_menu_book_24"
+            android:tint="@color/colorPrimary"
+            android:background="@drawable/white_circle"
+            android:backgroundTint="#FBE8E8"
+            android:layout_height="50dp"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

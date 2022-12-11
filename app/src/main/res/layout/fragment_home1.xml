@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.HomeFragment1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="#F3F3F3"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:background="#F3F3F3"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_above="@+id/tv_Continue"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/wishing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello,"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_15sdp"
+
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Welcome Back! Choose One of Our Services"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/grayText" />
+
+
+
+
+                <LinearLayout
+                    android:visibility="gone"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_car_wash_detail"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+
+                    <ProgressBar
+                        android:id="@+id/idProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+
+
+
+
+
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/recyclerview"/>
+
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/li_carwash"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/rect_dashboad"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:src="@drawable/carwash"
+                            android:padding="@dimen/_8sdp"
+                            android:backgroundTint="#3B93FD"
+                            android:background="@drawable/white_circle"
+                            android:layout_height="60dp"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Car Wash"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/li_carpolish"
+
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/rect_dashboad"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:src="@drawable/polish"
+                            android:padding="@dimen/_8sdp"
+                            android:backgroundTint="#2FE9DA"
+                            android:background="@drawable/white_circle"
+                            android:layout_height="60dp"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Car Polish"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_90sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/li_interiorwash"
+
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/rect_dashboad"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:src="@drawable/steeringwheel"
+                            android:padding="@dimen/_8sdp"
+                            android:backgroundTint="#FDD212"
+                            android:background="@drawable/white_circle"
+                            android:layout_height="60dp"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Interior Wash"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:id="@+id/li_carservices"
+
+                        android:background="@drawable/rect_dashboad"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:src="@drawable/maintenance"
+                            android:padding="@dimen/_8sdp"
+                            android:backgroundTint="#6DEFA7"
+                            android:background="@drawable/white_circle"
+                            android:layout_height="60dp"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Car Services"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/li_enginewash"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/rect_dashboad"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:src="@drawable/engine"
+                            android:padding="@dimen/_8sdp"
+                            android:backgroundTint="#FC6473"
+                            android:background="@drawable/white_circle"
+                            android:layout_height="60dp"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Engine Wash"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:id="@+id/li_parking"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/rect_dashboad"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:src="@drawable/parking"
+                            android:padding="@dimen/_8sdp"
+                            android:backgroundTint="#B875F8"
+                            android:background="@drawable/white_circle"
+                            android:layout_height="60dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Parking"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_Continue"
+            android:visibility="gone"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="50dp"
+            android:textSize="15sp"
+            android:text="  Continue  "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:background="@drawable/rect_gradient_spla"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/booking"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_above="@+id/navigation"
+            android:layout_alignParentRight="true"
+            android:layout_margin="30dp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_baseline_menu_book_24"
+            android:tint="@color/colorPrimary"
+            android:background="@drawable/white_circle"
+            android:backgroundTint="#FBE8E8"
+            android:layout_height="50dp"
+            />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

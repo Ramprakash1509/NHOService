@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.BookingFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:backgroundTint="#9EF1F1F1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/background_login"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_profile"
+                    android:padding="@dimen/_8sdp"
+                    android:backgroundTint="#CCCCCC"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/im5" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im5"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="jhooooooo"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="20 april 2022"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <RatingBar
+                    android:id="@+id/ratingBar1"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    android:isIndicator="true"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:rating="3.5"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:backgroundTint="#9EF1F1F1"
+                 android:background="@drawable/background_login"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_profile"
+                    android:padding="@dimen/_8sdp"
+                    android:backgroundTint="#CCCCCC"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/im1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im1"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Asasassaas"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="08 april 2022"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <RatingBar
+                     android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    android:isIndicator="true"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:rating="3.5"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:backgroundTint="#9EF1F1F1"
+                 android:background="@drawable/background_login"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_profile"
+                    android:padding="@dimen/_8sdp"
+                    android:backgroundTint="#CCCCCC"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/im2" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Wewewewe"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="05 april 2022"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <RatingBar
+                     android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    android:isIndicator="true"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:rating="3.5"/>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:backgroundTint="#9EF1F1F1"
+                 android:background="@drawable/background_login"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_profile"
+                    android:padding="@dimen/_8sdp"
+                    android:backgroundTint="#CCCCCC"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/im3" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im3"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Rttrtrttt"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="20 april 2022"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <RatingBar
+                     android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    android:isIndicator="true"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:rating="3.5"/>
+
+
+                <!--<RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />-->
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:backgroundTint="#9EF1F1F1"
+                 android:background="@drawable/background_login"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_5sdp">
+
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/ic_profile"
+                    android:padding="@dimen/_8sdp"
+                    android:backgroundTint="#CCCCCC"
+                    android:background="@drawable/white_circle"
+                    android:layout_height="45dp"
+                    android:id="@+id/im4" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/im4"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="Reewwew"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_centerInParent="true"
+                        android:text="06 april 2022"
+                        android:textColor="@color/catgcol"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <RatingBar
+                     android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:theme="@style/RatingBar"
+                    android:isIndicator="true"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:rating="3.5"/>
+
+
+                <!--<RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />-->
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

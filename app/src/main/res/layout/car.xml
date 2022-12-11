@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/lohoyint"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:id="@+id/li_carwash"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/rect_dashboad"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:id="@+id/carimage"
+                android:src="@drawable/carwash"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:backgroundTint="#F8DDDB"
+                android:background="@drawable/white_circle"
+                android:layout_height="60dp"/>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <LinearLayout
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Model Number :"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="center_vertical"
+                       android:textColor="@color/black"
+                       android:textSize="@dimen/_11sdp" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/modelNumber"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="center_vertical"
+                       android:textColor="@color/back_bg"
+                       android:textSize="@dimen/_10sdp" />
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type :"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Car Name"
+                       android:id="@+id/CarName"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                       android:layout_gravity="center_vertical"
+                       android:gravity="center_vertical"
+                       android:textColor="@color/back_bg"
+                       android:textSize="@dimen/_10sdp" />
+               </LinearLayout>
+
+           </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+</LinearLayout>

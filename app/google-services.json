@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "1023645784723",
+    "firebase_url": "https://carwash-d26d1-default-rtdb.firebaseio.com",
+    "project_id": "carwash-d26d1",
+    "storage_bucket": "carwash-d26d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023645784723:android:4b8c035de8e21e5df90b66",
+        "android_client_info": {
+          "package_name": "com.example.krishify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023645784723-m3quelhk536osp95td31fdtb3pse9s66.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.krishify",
+            "certificate_hash": "17fb87b2039f1304f01ff562e3157317d9b10dd2"
+          }
+        },
+        {
+          "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBck_PtMGovacrdo2-Xu_2zb_-MY3TQXGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023645784723:android:c31dfd6e2bc07b88f90b66",
+        "android_client_info": {
+          "package_name": "com.nhoserviceboy.ServiceBoy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBck_PtMGovacrdo2-Xu_2zb_-MY3TQXGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023645784723:android:ab74427989f066bcf90b66",
+        "android_client_info": {
+          "package_name": "com.nhoserviceboy.admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBck_PtMGovacrdo2-Xu_2zb_-MY3TQXGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023645784723:android:0c289137353a93aef90b66",
+        "android_client_info": {
+          "package_name": "com.nhoserviceboy.carwash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023645784723-961crnn2ho5i3b6gupb2ad8to4bj7k2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nhoserviceboy.carwash",
+            "certificate_hash": "077e3c2865362d1e627d4915d8a5b8b1455a6853"
+          }
+        },
+        {
+          "client_id": "1023645784723-cjurs8umu0edagm0shavj9fldi666gg0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nhoserviceboy.carwash",
+            "certificate_hash": "17fb87b2039f1304f01ff562e3157317d9b10dd2"
+          }
+        },
+        {
+          "client_id": "1023645784723-t28f35dl37o34dha6ct140n94oafiuk8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nhoserviceboy.carwash",
+            "certificate_hash": "1c0f20c5b0b463963c5f27d9ba1071de3946e385"
+          }
+        },
+        {
+          "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBck_PtMGovacrdo2-Xu_2zb_-MY3TQXGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023645784723-73n1is80usfpje51so2vtmvsk5lvkt5j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
